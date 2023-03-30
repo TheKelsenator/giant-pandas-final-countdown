@@ -79,6 +79,8 @@
   * Directions for Future Development
   * Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MongoDB Atlas](https://coding-boot-camp.github.io/full-stack/mongodb/deploy-with-heroku-and-mongodb-atlas) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 
+## Technologies Used
+
 ## License
 
   This project is licensed under the terms of the MIT license.
@@ -94,6 +96,7 @@
   * Github [TheKelsenator](https://github.com/TheKelsenator)
   * Github []()
   * Github []()
+  * Github []()
 
 ## Screenshots
 
@@ -105,5 +108,6 @@
 
   Email 
   * [km.okelley89@gmail.com](mailto:km.okelley89@gmail.com)
+  * []()
   * []()
   * []()
