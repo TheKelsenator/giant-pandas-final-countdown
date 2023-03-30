@@ -91,9 +91,9 @@
 
 ## Contribution
 
-  Github [TheKelsenator](https://github.com/TheKelsenator)
-  Github []()
-  Github []()
+  * Github [TheKelsenator](https://github.com/TheKelsenator)
+  * Github []()
+  * Github []()
 
 ## Screenshots
 
