@@ -1,0 +1,1 @@
+//  this page will just show all of your projects. maybe in a grid/ flexbox layout? responsiveness is key.
