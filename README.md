@@ -1,21 +1,21 @@
-# Final Project: Project Management Board 
+# <b>Final Project: Project Management Board</b>
 
   <a href="https://choosealicense.com/licenses/mit">
   <img src="https://img.shields.io/badge/License-MIT-blue" />
   </a>
 
-## MERN Stack Single-Page Application
+## <b>MERN Stack Single-Page Application</b>
 
   University of Utah
   Full-Stack Web Development Coding Bootcamp
 
   -Fall 2022 - Spring 2023
 
-## Description
+## <b>Description</b>
 
   A project management board will help you organize and prioritize your work. You can create project boards for specific feature work, release checklists, or just to simplify your work flow. With project boards, you have the flexibility to create customized workflows that suit your needs. 
 
-## Table of Contents
+## <b>Table of Contents</b>
 
 - [User Story](#user)
 - [Acceptance Criteria](#acceptance)
@@ -25,7 +25,7 @@
 - [Screenshots](#screenshots)
 - [Contact Me](#contact)
 
-## User Story
+## <b>User Story</b>
 
   * AS A user, I want to store all of the work needing to be done - on all my projects - in one place.
   * AS A user, I want to be able to create new boards for each individual project.
@@ -34,7 +34,7 @@
   * AS A user, I want to be able to update the status of a project (Upcoming, In Progress, Complete, etc).
   * AS A user, I want to be able to rate each project based on how fun it is. 
 
-## Acceptance Criteria 
+## <b>Acceptance Criteria</b>
 
   * Use React for the front end.
   * Use GraphQL with a Node.js and Express.js server.
@@ -49,35 +49,37 @@
   * Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
   * Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-## Technologies Used
+## <b>Technologies Used</b>
 
   * 
   * 
   * 
 
-## License
+## <b>License</b>
 
   This project is licensed under the terms of the MIT license.
   [License Information](https://choosealicense.com/licenses/mit)
 
 
-## Links
+## <b>Links</b>
 
 
 
-## Contribution
+## <b>Contribution</b>
+  <b>Github -</b> 
+  <br>
+  Kelsey O'Kelley - <a href="https://github.com/TheKelsenator">TheKelsenator</a>
+  <br>
+  Andrew Olsen - <a href="https://github.com/AndyOlsen1295">AndyOlsen1295</a>
+  <br>
+  Matthew Webb - <a href="https://github.com/mattchief4234">mattchief4234</a>
+  <br>
+  Joshua Lucas - <a href="https://github.com/JoshuaLucas212">JoshuaLucas212</a>
+  <br>
+  Miguel Atanacio - <a href="https://github.com/Migeru27">Migeru27</a>
+  <br>
 
-  Github: Kelsey O'Kelley - [TheKelsenator](https://github.com/TheKelsenator)
-  <br>
-  Github: Andrew Olsen - [AndyOlsen1295](https://github.com/AndyOlsen1295)
-  <br>
-  Github: Matthew Webb - [mattchief4234](https://github.com/mattchief4234)
-  <br>
-  Github: Joshua Lucas - [JoshuaLucas212](https://github.com/JoshuaLucas212)
-  <br>
-  Github: Miguel Atanacio - [Migeru27](https://github.com/Migeru27)
-  <br>
-## Screenshots
+## <b>Screenshots</b>
 
   ![alt_text]()
   <br>
@@ -85,17 +87,17 @@
   <br>
   ![alt_text]()
   <br>
-## Contact Us
 
-  Email -
+## <b>Contact Us</b>
+  <b>Email -</b>
     <br>
-    Kelsey O'Kelley - [km.okelley89@gmail.com](mailto:km.okelley89@gmail.com)
+    Kelsey O'Kelley - <a href="mailto:km.okelley89@gmail.com">km.okelley89@gmail.com</a>
     <br>
-    Andrew Olsen - [andyolsen1295@gmail.com](mailto:andyolsen1295@gmail.com)
+    Andrew Olsen - <a href="mailto:andyolsen1295@gmail.com">andyolsen1295@gmail.com</a>
     <br>
-    Matthew Webb - [mattchief4234@gmail.com](mailto:mattchief4234@gmail.com)
+    Matthew Webb - <a href="mailto:mattchief4234@gmail.com">mattchief4234@gmail.com</a>
     <br>
-    Joshua Lucas - [Joshluke342@gmail.com](mailto:Joshluke342@gmail.com)
+    Joshua Lucas - <a href="Joshluke342@gmail.com">Joshluke342@gmail.com</a>
     <br>
-    Miguel Atanacio - [migatanacio@gmail.com](mailto:migatanacio@gmail.com)
+    Miguel Atanacio - <a href="migatanacio@gmail.com">migatanacio@gmail.com</a>
     <br>
