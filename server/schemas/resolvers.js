@@ -10,7 +10,7 @@ const resolvers = {
             return Project.findOne({_id: ProjectId })
         },
 
-    }, //end of Quesry
+    }, //end of Query
 
     Mutation: {
         addProject: async(parent, {projectText, }) => {
