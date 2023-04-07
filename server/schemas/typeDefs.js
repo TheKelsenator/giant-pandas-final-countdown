@@ -9,7 +9,6 @@ type Project {
     comments: [Comment]!
 }
 
-
 type Comment {
     _id: ID
     commentText: String
