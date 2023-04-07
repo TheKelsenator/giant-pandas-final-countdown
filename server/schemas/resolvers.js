@@ -7,7 +7,7 @@ const resolvers = {
         },
 
         project: async (parent, { projectId }) => {
-            return Project.findOne({_id: ProjectId })
+            return Project.findOne({_id: projectId })
         },
 
     }, //end of Quesry
