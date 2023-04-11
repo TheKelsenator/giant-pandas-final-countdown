@@ -1,11 +1,5 @@
 function App() {
-    const [comments, setComments] = useState([]);
-    const [showCommentForm, setShowCommentForm] = useState(false);
-  
-    const handleAddComment = comment => {
-      setComments([...comments, comment]);
-    };
-  
+      
     return (
         <div class="bg-blue-500   ">
         <div class="flex justify-center container mx-auto my-auto w-screen h-screen items-center flex-col">
