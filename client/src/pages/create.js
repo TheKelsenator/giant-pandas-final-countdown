@@ -1,15 +1,72 @@
-// this page will ask a series of questions. 
+ import React, { useState } from "react";
 
-// What is the name of the Project?
+function ProjectForm() {
+  const [name, setName] = useState("");
+  const [members, setMembers] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const [priority, setPriority] = useState("");
+  const [notes, setNotes] = useState("");
 
-// do you have any group members? if so, who are your group members?
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const project = {
+      name,
+      members,
+      dueDate,
+      priority,
+      notes,
+    };
+    console.log(project);
+  };
 
-// when would you like to have this project completed by?
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name of the project:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Group members:
+        <input
+          type="text"
+          value={members}
+          onChange={(e) => setMembers(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Desired due date:
+        <input
+          type="date"
+          value={dueDate}
+          onChange={(e) => setDueDate(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Priority:
+        <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+          <option value="">--Select--</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </label>
+      <br />
+      <label>
+        Notes:
+        <textarea value={notes} onChange={(e) => setNotes(e.target.value)} />
+      </label>
+      <br />
+      <button type="submit">Create</button>
+    </form>
+  );
+}
 
-// low, medium, or high priority?
 
-// *optional questions. how fun would you rate this?
-
-// any notes or reminders you would like to add about the project before you begin?
-
-// create button. 
+// havent added the tailwind yet. next on the to-do list!
