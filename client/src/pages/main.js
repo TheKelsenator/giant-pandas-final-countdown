@@ -1,271 +1,42 @@
-// this page will have a small tutorial, logo, and login / sign up box. 
-
-//login input objects
-const loginInputs = [
-    {
-      label: "User Name",
-      type: "text",
-      show: true,
-      validated: "",
-      id: "a"
-    }, {
-      label: "Password",
-      type: "password",
-      show: true,
-      validated: "",
-      id: "b"
-    }
-  ];
-
-  //sign in objects  
-  const signupInputs = [
-    {
-      label: "User Name",
-      type: "text",
-      show: false,
-      validated: "",
-      id: "c"
-    }, {
-      label: "Email",
-      type: "email",
-      show: false,
-      validated: "",
-      id: "d"
-    }, {
-      label: "Password",
-      type: "password",
-      show: false,
-      validated: "",
-      id: "e"
-    }, {
-      label: "Re-Enter Password",
-      type: "password",
-      show: false,
-      validated: "",
-      id: "f"
-    }
-  ];
+function App() {
+    const [comments, setComments] = useState([]);
+    const [showCommentForm, setShowCommentForm] = useState(false);
   
-  const LoginWrapper = React.createClass({
-    
-    getInitialState () {
-      return {
-        signUp: false, 
-        signupInputs: signupInputs, 
-        loginInputs: loginInputs
-      };
-    },
-    
-    inUpClick () {
-      this.setState({signUp: !this.state.signUp});
-      this.animateFields("signupInputs");
-      setTimeout(()=>{this.animateFields("loginInputs");}, 100); 
-    },
-    
-    animateFields (formName) {
-      let start, length, newForm;
-      
-      if (formName === "loginInputs") {
-        newForm = this.state.loginInputs.slice();
-      } else if (formName === "signupInputs") {
-        newForm = this.state.signupInputs.slice();
-      }
-      
-      start = 0;
-      length = newForm.length;
-      
-      console.log(newForm);
-      
-      let stagger = (i) => {
-        if (i < length) {
-            setTimeout(() => {
-              newForm[i].show = !newForm[i].show
-            this.setState({[formName]: newForm});
-            stagger(i + 1);
-          },70);
-        }
-      };
-      stagger(start);  
-    },
-    
-    submitForm (e) {
-      e.preventDefault();
-    },
-    
-    validateField(event, id) {
-      let newState, fieldInState;
-      const value = event.target.value;
-      
-      const getField = (field) => (
-        field.id === id
-      );
-      
-      const validate = (v) => (
-        v.length > 0
-      );
-      
-      if (this.state.signUp === true) {
-        newState = this.state.signupInputs.slice();
-        fieldInState = newState.find(getField);
-          
-        fieldInState.validated = validate(value) ? true : false;
-        this.setState({signupInputs: newState});
-      }
-      else {
-        newState = this.state.loginInputs.slice();
-        fieldInState = newState.find(getField);
+    const handleAddComment = comment => {
+      setComments([...comments, comment]);
+    };
   
-        fieldInState.validated = validate(value) ? true : false;
-        this.setState({loginInputs: newState});
-      }
-    },
-    
-    render () {
-      
-      return (
-        <div>
-          <Login 
-            signUp={this.state.signUp}
-            inputs={this.state.loginInputs}
-            inUpClick={this.inUpClick}
-            submitForm={this.submitForm}
-            validateField={this.validateField}
-  
-          />
-          <SignUp
-            signUp={this.state.signUp}
-            inputs={this.state.signupInputs}
-            inUpClick={this.inUpClick}
-            submitForm={this.submitForm}
-            validateField={this.validateField}
-          />
-        </div>
-      );
-    }
-  });
-  
-  const Login = ({
-    inputs, 
-    signUp, 
-    inUpClick, 
-    submitForm, 
-    validateField
-  }) => (
-    <div className={signUp ? "login login-closed" : "login"} >
-      <h1>Log In</h1>
-      <hr />
-      <Form 
-        inputs={inputs} 
-        submitForm={submitForm}
-        validateField={validateField}
-      />
-      <SignupLink inUpClick={inUpClick} />
-    </div>
-  );
-  
-  const SignUp = ({
-    inputs, 
-    signUp, 
-    inUpClick, 
-    submitForm, 
-    validateField
-  }) => (  
-    <div 
-      className={signUp 
-        ? "sign-up" 
-        : "sign-up sign-up-closed"}
-    >
-      <h1>Sign Up</h1>
-      <hr />
-      <Form 
-        inputs={inputs} 
-        submitForm={submitForm}
-        validateField={validateField}
-      />
-      <LoginLink inUpClick={inUpClick} />
-    </div>
-  );
-  
-  const Form = ({
-    inputs, 
-    submitForm, 
-    validateField
-  }) => {
-    const inputsMapped = inputs.map((i) => (
-      <Input 
-        label={i.label} 
-        type={i.type}
-        show={i.show}
-        validated={i.validated}
-        id={i.id}
-        validateField={validateField}
-      />
-    ));
-    
     return (
-      <form onSubmit={submitForm}>
-        {inputsMapped}
-        <Submit />
-      </form>
+        <div class="bg-blue-500   ">
+        <div class="flex justify-center container mx-auto my-auto w-screen h-screen items-center flex-col">
+            <div class="text-slate-100 items-center">
+                <svg class="w-10 h-10 mx-auto pb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div class="text-center pb-3">Welcome back!</div>
+            </div>
+
+            <div class="w-full md:w-3/4  lg:w-1/2 flex flex-col items-center bg-slate-50 rounded-md pt-12">
+                <!-- email input -->
+                <div class="w-3/4 mb-6">
+                    <input type="email" name="email" id="email" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500 border-solid border-2 border-slate-300" placeholder="Email adress">
+                </div>
+                <!-- password input -->
+                <div class="w-3/4 mb-6">
+                    <input type="password" name="password" id="password" class="w-full py-4 px-8 bg-slate-200 placeholder:font-semibold rounded hover:ring-1 hover:ring-gray-600 outline-slate-500  border-solid border-2 border-slate-300" placeholder="Password">
+                </div>
+                <!-- button -->
+                <div class="w-3/4 mb-12">
+                    <button type="submit" class="py-4 bg-blue-500 w-full rounded text-blue-50 font-bold hover:bg-blue-700"> LOGIN</button>
+                </div>
+            </div>
+            <div class="flex justify-center container mx-auto mt-6 text-slate-100 text-sm">
+                <div class="flex flex-col sm:flex-row  justify-between md:w-1/2 items-center">
+                    <div class="flex" >Forgot your password</div>
+                    <div class="flex " >Don't have an account? Get Started</div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
     );
-  };
-  
-  const Submit = () => (
-    <div>
-      <hr />
-      <button
-        className="submit-button"
-        type="submit"
-      > Submit
-      </button>
-    </div>
-  );
-  
-  const Input = ({
-    label, 
-    type, 
-    show, 
-    validated, 
-    id, 
-    validateField
-  }) => (
-    <div className={show ? "field field-in" : "field"}>
-      <label className="label">{label}
-        <i 
-          className={validated 
-            ? "fa fa-check animate-check" 
-            : ""}
-          aria-hidden="true"
-        ></i>
-      </label>
-      <br />
-      <input 
-        className="input" 
-        type={type}
-        onBlur={()=>{validateField(event, id);}}
-      />
-    </div>
-  );
-  
-  const SignupLink = ({inUpClick}) => (
-    <div className="signup-link">
-      <p className="in-out"> 
-        Don't have an account? {" "}
-        <a href="#" onClick={inUpClick}>Sign Up Here</a>
-      </p>
-    </div>
-  );
-  
-  const LoginLink = ({inUpClick}) => (
-    <div className="signup-link">
-      <p className="in-out"> 
-        Already have an account? {" "}
-        <a href="#" onClick={inUpClick}>Log In Here</a>
-      </p>
-    </div>
-  );
-  
-  ReactDOM.render(
-    <LoginWrapper />, 
-    document.getElementById('login-signup')
-  );
+  }
