@@ -2,13 +2,13 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
-const {  } = require('./schemas'); //NEED TO INPUT WHICH SCHEMAS THAT WE NEED TO ADD THEM WHEN WE HAVE THEM!
+const { resolvers, typeDefs  } = require('./schemas'); //NEED TO INPUT WHICH SCHEMAS THAT WE NEED TO ADD THEM WHEN WE HAVE THEM!
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
-  //INPUT THESE WHEN WE HAVE THE SCHEMA"S
+  resolvers, typeDefs
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (
     //we need to addt these when we know what schema's we will use 
+    typeDefs, resolvers
 ) => {
   await server.start();
   server.applyMiddleware({ app });
