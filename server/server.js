@@ -2,7 +2,7 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
-const {  } = require('./schemas'); //NEED TO INPUT WHICH SCHEMAS THAT WE NEED TO ADD THEM WHEN WE HAVE THEM!
+const { resolvers, typeDefs  } = require('./schemas'); //NEED TO INPUT WHICH SCHEMAS THAT WE NEED TO ADD THEM WHEN WE HAVE THEM!
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
